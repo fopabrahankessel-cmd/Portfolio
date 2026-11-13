@@ -1,0 +1,206 @@
+{
+  "nav": {
+    "about": "À propos",
+    "work": "Projets",
+    "stack": "Technologies",
+    "path": "Parcours",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp",
+    "home": "Retour en haut",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu",
+    "language": "Langue",
+    "skip": "Aller au contenu",
+    "main": "Navigation principale"
+  },
+  "hero": {
+    "badge": "Disponible en CDI ou en freelance",
+    "title1": "Ingénieur backend.",
+    "title2": "Formé à Yaoundé.",
+    "intro": "Je suis Brahan Kessel Fopa. Je conçois et livre des systèmes Java et Spring Boot, de la base de données jusqu'au téléphone de l'enseignant.",
+    "ctaWhatsapp": "Écrivez-moi sur WhatsApp",
+    "ctaWork": "Voir les projets",
+    "portraitAlt": "Portrait de Brahan Kessel Fopa",
+    "scroll": "Défiler",
+    "stats": {
+      "systems": "systèmes livrés en solo",
+      "students": "élèves dans l'établissement pour lequel Scolarys a été conçu",
+      "languages": "Je travaille en français et en anglais"
+    }
+  },
+  "about": {
+    "eyebrow": "À propos",
+    "title": "L'ingénieur derrière les systèmes",
+    "bio1": "Je suis ingénieur logiciel. Depuis deux ans, je construis de vrais logiciels, dont trois systèmes livrés en solo. Java est mon langage principal : je conçois et livre des services backend avec Spring Boot, appuyés sur PostgreSQL et Microsoft SQL Server.",
+    "bio2": "Je développe aussi des applications mobiles avec Flutter et React Native, ce qui me permet de comprendre un produit de la base de données jusqu'au téléphone de l'utilisateur.",
+    "locationLabel": "Basé à",
+    "location": "Yaoundé, Cameroun",
+    "languagesLabel": "Langues",
+    "languages": "Français, anglais",
+    "seekingLabel": "Je recherche",
+    "seeking": "Un poste à temps plein ou des clients en freelance",
+    "downloadCv": "Télécharger le CV"
+  },
+  "work": {
+    "eyebrow": "Projets",
+    "title": "Trois systèmes, chacun réalisé seul, du premier entretien à la livraison",
+    "flagship": "Projet phare",
+    "role": "Rôle",
+    "tech": "Réalisé avec",
+    "decisions": "Décisions d'ingénierie",
+    "constraint": "La contrainte qui a guidé la conception",
+    "status": "Statut",
+    "viewCode": "Voir sur GitHub",
+    "privateCode": "Code privé",
+    "expand": "Lire l'étude de cas",
+    "collapse": "Fermer l'étude de cas",
+    "flowTitle": "Comment une absence parvient à un parent",
+    "flowHint": "Sélectionnez une étape pour voir la décision qui s'y cache.",
+    "flowStep": "Étape {{current}} sur {{total}}"
+  },
+  "projects": {
+    "schoollink": {
+      "name": "SchoolLink",
+      "tagline": "Suivi des présences et notification des parents",
+      "summary": "Une plateforme de suivi des présences et de notification des parents pour les établissements secondaires du Cameroun. Les enseignants saisissent les présences par période sur un téléphone, les surveillants de secteur notent les retards au portail, et chaque absence parvient au tuteur le jour même. Les situations répétées déclenchent des alertes sur lesquelles le Surveillant Général statue. Les règles ne décident jamais seules.",
+      "role": "Développeur unique : spécification, architecture, backend, tableau de bord web, application Android et déploiement."
+    },
+    "scolarys": {
+      "name": "Scolarys",
+      "tagline": "Gestion scolaire pour plus de 3 000 élèves",
+      "summary": "Un système de gestion scolaire réalisé pendant mon stage académique au Collège Adventiste d'Odza à Yaoundé, en remplacement d'une ancienne application de bureau .NET. Il couvre les inscriptions, les emplois du temps, la saisie des notes, les moyennes et les classements, la discipline, les bulletins bilingues, la scolarité en quatre tranches et un portail parents.",
+      "role": "Développeur unique, y compris le recueil des besoins avant toute ligne de code.",
+      "constraint": "Plus de 200 enseignants se partagent au maximum 5 ordinateurs de bureau pendant la période de saisie des notes.",
+      "status": "Livré et soutenu le 1er octobre 2026. Le code est privé, car il contient les données de l'établissement.",
+      "decisions": {
+        "1": {
+          "title": "Les besoins avant le code",
+          "body": "J'ai mené les entretiens avec six Directeurs des Études et le Surveillant Général, puis rédigé le cahier des charges fonctionnel suivi pendant la réalisation."
+        },
+        "2": {
+          "title": "Un modèle de domaine à l'image de l'établissement",
+          "body": "Sections francophone et anglophone, plus une filière technique, modélisées en 8 packages et environ 107 classes, avec des moyennes séquentielles, trimestrielles et annuelles classées par classe et par niveau."
+        },
+        "3": {
+          "title": "La saisie des notes déplacée sur le téléphone",
+          "body": "Une application React Native permet aux enseignants de saisir les notes sur leur propre téléphone. Elle fonctionne hors ligne une fois qu'elle a confirmé que la session de saisie est ouverte."
+        },
+        "4": {
+          "title": "Paiements et messages intégrés",
+          "body": "Campay gère MTN et Orange Mobile Money pour la scolarité, et les SMS tiennent les parents informés. Les bulletins reprennent le format bilingue existant de l'établissement."
+        }
+      }
+    },
+    "aics": {
+      "name": "AICS Report Hub",
+      "tagline": "Dépôt des rapports de fin d'études multi-campus",
+      "summary": "Une plateforme Django de gestion des dépôts de rapports de fin d'études sur plusieurs campus. Les administrateurs de campus inscrivent étudiants et encadreurs, les encadreurs délivrent des codes de dépôt à usage unique, les étudiants déposent leur PDF, et les rapports sont consultables publiquement, recherchables et notés avec un commentaire.",
+      "role": "Développeur unique.",
+      "decisions": {
+        "1": {
+          "title": "Quatre rôles, cloisonnés par campus",
+          "body": "Un contrôle d'accès par rôle sur un modèle utilisateur personnalisé : chaque administrateur et chaque encadreur ne voit que son campus."
+        },
+        "2": {
+          "title": "Des codes de dépôt à usage unique",
+          "body": "L'encadreur délivre un code par étudiant, et le formulaire le vérifie en direct avant l'envoi du fichier."
+        },
+        "3": {
+          "title": "Des PDF servis par l'application",
+          "body": "Les rapports sont diffusés par l'application au lieu d'être exposés comme fichiers médias, et chaque dépôt reçoit automatiquement un aperçu de sa première page."
+        }
+      }
+    }
+  },
+  "flow": {
+    "phone": {
+      "label": "Téléphone de l'enseignant",
+      "caption": "Flutter, hors ligne d'abord",
+      "decisionTitle": "Fonctionne sans réseau",
+      "decision": "Les écrans de l'enseignant fonctionnent d'abord hors ligne. Le téléphone génère les identifiants et l'API accepte des requêtes PUT idempotentes : un téléphone qui retrouve le réseau peut réessayer sans créer de doublons."
+    },
+    "api": {
+      "label": "API REST",
+      "caption": "Spring Boot, JWT",
+      "decisionTitle": "Le périmètre vient du jeton",
+      "decision": "Chaque requête est filtrée côté serveur selon l'établissement et le périmètre de l'utilisateur, lus dans le JWT et jamais dans la requête. Un monolithe modulaire, 12 modules, une seule API."
+    },
+    "db": {
+      "label": "Base de données",
+      "caption": "PostgreSQL 16, Flyway",
+      "decisionTitle": "Rien ne change en silence",
+      "decision": "Un journal d'audit en ajout seul enregistre chaque création, modification, annulation et export, et les évolutions du schéma sont versionnées avec Flyway."
+    },
+    "outbox": {
+      "label": "Outbox",
+      "caption": "Table transactionnelle",
+      "decisionTitle": "Aucune notification perdue",
+      "decision": "Les notifications sont écrites dans une table outbox, dans la même transaction que l'absence : un redémarrage ne peut pas en perdre une."
+    },
+    "dispatcher": {
+      "label": "Dispatcher",
+      "caption": "Firebase, SMS",
+      "decisionTitle": "Envoi séparé, avec reprises",
+      "decision": "Un dispatcher distinct lit l'outbox et réessaie en cas d'échec. Le tuteur reçoit une notification Firebase, ou un seul SMS récapitulatif par jour."
+    },
+    "guardian": {
+      "label": "Tuteur",
+      "caption": "Informé le jour même",
+      "decisionTitle": "Vie privée dès la conception",
+      "decision": "Le tuteur est informé d'une absence le jour même. Le système ne conserve que l'année de naissance, aucune photo, et ne place jamais un numéro de téléphone dans une URL ou un journal."
+    }
+  },
+  "stack": {
+    "eyebrow": "Technologies",
+    "title": "Java au centre, le reste quand le produit en a besoin",
+    "core": "Cœur",
+    "groups": {
+      "backend": "Backend",
+      "data": "Données",
+      "mobile": "Mobile",
+      "web": "Web",
+      "tooling": "Outils et tests"
+    }
+  },
+  "path": {
+    "eyebrow": "Parcours",
+    "title": "Où je me suis formé et où j'ai travaillé",
+    "graduationAlt": "Brahan Kessel Fopa lors de sa remise de diplôme, son rapport de fin d'études à la main",
+    "internship": {
+      "title": "Stagiaire en génie logiciel",
+      "place": "Collège Adventiste d'Odza, Yaoundé",
+      "period": "Juillet 2026 – décembre 2026",
+      "points": [
+        "Recueil des besoins auprès de six Directeurs des Études et du Surveillant Général, puis rédaction du cahier des charges fonctionnel du nouveau système de gestion de l'établissement.",
+        "Réalisation et livraison de Scolarys, soutenu le 1er octobre 2026.",
+        "Encadré par M. Ngangue Samuel, ingénieur informaticien."
+      ]
+    },
+    "degree": {
+      "title": "Diplôme en génie logiciel (BAC+3)",
+      "place": "Institut Africain d'Informatique (IAI), Centre d'Excellence Technologique Paul Biya, Yaoundé",
+      "period": "2023 – 2026",
+      "points": ["Diplômé en novembre 2026, titulaire d'une licence en génie logiciel."]
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title1": "Un poste ou un projet en tête ?",
+    "title2": "Parlons-en.",
+    "intro": "WhatsApp est le moyen le plus rapide de me joindre. L'e-mail fonctionne aussi.",
+    "whatsapp": "Discuter sur WhatsApp",
+    "email": "Envoyer un e-mail",
+    "whatsappMessage": "Bonjour Brahan, j'ai vu votre portfolio et j'aimerais échanger au sujet d'une opportunité.",
+    "emailSubject": "Opportunité pour Brahan Kessel Fopa",
+    "downloadCv": "Télécharger le CV",
+    "phoneLabel": "Téléphone",
+    "emailLabel": "E-mail"
+  },
+  "footer": {
+    "built": "Conçu et développé à Yaoundé.",
+    "rights": "Tous droits réservés."
+  },
+  "common": {
+    "newTab": "s'ouvre dans un nouvel onglet"
+  }
+}

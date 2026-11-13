@@ -1,0 +1,206 @@
+{
+  "nav": {
+    "about": "About",
+    "work": "Work",
+    "stack": "Stack",
+    "path": "Path",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp",
+    "home": "Back to top",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "language": "Language",
+    "skip": "Skip to content",
+    "main": "Main navigation"
+  },
+  "hero": {
+    "badge": "Open to full-time and freelance",
+    "title1": "Backend engineer.",
+    "title2": "Built in Yaoundé.",
+    "intro": "I'm Brahan Kessel Fopa. I design and ship Java and Spring Boot systems, from the database to the phone in a teacher's hand.",
+    "ctaWhatsapp": "WhatsApp me",
+    "ctaWork": "View the work",
+    "portraitAlt": "Portrait of Brahan Kessel Fopa",
+    "scroll": "Scroll",
+    "stats": {
+      "systems": "systems delivered solo",
+      "students": "students at the school Scolarys was built for",
+      "languages": "I work in French and English"
+    }
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "The engineer behind the systems",
+    "bio1": "I'm a software engineer who has spent two years building real software, with three systems delivered solo. Java is my home language: I design and ship backend services with Spring Boot, backed by PostgreSQL and Microsoft SQL Server.",
+    "bio2": "I also build mobile apps with Flutter and React Native, so I understand a product from the database to the phone in a user's hand.",
+    "locationLabel": "Based in",
+    "location": "Yaoundé, Cameroon",
+    "languagesLabel": "Languages",
+    "languages": "French, English",
+    "seekingLabel": "Looking for",
+    "seeking": "A full-time role or freelance clients",
+    "downloadCv": "Download CV"
+  },
+  "work": {
+    "eyebrow": "Work",
+    "title": "Three systems, each built alone from first interview to delivery",
+    "flagship": "Flagship",
+    "role": "Role",
+    "tech": "Built with",
+    "decisions": "Engineering decisions",
+    "constraint": "The constraint that shaped it",
+    "status": "Status",
+    "viewCode": "View on GitHub",
+    "privateCode": "Private code",
+    "expand": "Read the case study",
+    "collapse": "Close the case study",
+    "flowTitle": "How an absence reaches a parent",
+    "flowHint": "Select a step to see the decision behind it.",
+    "flowStep": "Step {{current}} of {{total}}"
+  },
+  "projects": {
+    "schoollink": {
+      "name": "SchoolLink",
+      "tagline": "School attendance and parent notification",
+      "summary": "An attendance and parent-notification platform for secondary schools in Cameroon. Teachers record attendance per period on a phone, assistant discipline masters record lateness at the gate, and every absence reaches the guardian the same day. Repeated patterns raise risk alerts that a Discipline Master decides on. The rules never decide on their own.",
+      "role": "Sole developer: specification, architecture, backend, web dashboard, Android app and deployment."
+    },
+    "scolarys": {
+      "name": "Scolarys",
+      "tagline": "School management for 3,000+ students",
+      "summary": "A school management system built during my academic internship at Collège Adventiste d'Odza in Yaoundé, replacing a legacy .NET desktop application. It covers enrolment, timetabling, mark entry, averages and ranking, discipline records, bilingual report cards, tuition in four instalments and a parent portal.",
+      "role": "Sole developer, and the requirements work before any code.",
+      "constraint": "Over 200 teachers share at most 5 desktop computers during mark-entry season.",
+      "status": "Delivered and defended on 1 October 2026. The code is private because it holds the institution's data.",
+      "decisions": {
+        "1": {
+          "title": "Requirements before code",
+          "body": "I ran the interviews with six Directeurs des Études and the Surveillant Général, then wrote the functional specification the build followed."
+        },
+        "2": {
+          "title": "A domain model that fits the school",
+          "body": "Francophone and anglophone sections plus a technical branch, modelled in 8 packages and about 107 classes, with sequential, termly and annual averages ranked by class and level."
+        },
+        "3": {
+          "title": "Mark entry moved to the phone",
+          "body": "A React Native app lets teachers enter marks on their own phones. It works offline once it has confirmed the entry session is open."
+        },
+        "4": {
+          "title": "Payments and messages built in",
+          "body": "Campay handles MTN and Orange Mobile Money for tuition, and SMS keeps parents informed. Report cards match the school's existing bilingual format."
+        }
+      }
+    },
+    "aics": {
+      "name": "AICS Report Hub",
+      "tagline": "Final-year report submissions across campuses",
+      "summary": "A Django platform for managing final-year report submissions across multiple campuses. Campus admins register students and supervisors, supervisors issue one-time upload codes, students upload their PDF, and reports are publicly browsable, searchable and graded with feedback.",
+      "role": "Sole developer.",
+      "decisions": {
+        "1": {
+          "title": "Four roles, scoped by campus",
+          "body": "Role-based access on a custom user model, so each admin and supervisor only sees their own campus."
+        },
+        "2": {
+          "title": "One-time upload codes",
+          "body": "Supervisors issue a code per student, and the upload form validates it live before the file is sent."
+        },
+        "3": {
+          "title": "PDFs served through the app",
+          "body": "Reports are streamed by the application instead of being exposed as media files, and each upload gets an automatic first-page preview."
+        }
+      }
+    }
+  },
+  "flow": {
+    "phone": {
+      "label": "Teacher's phone",
+      "caption": "Flutter, offline-first",
+      "decisionTitle": "Works without a network",
+      "decision": "Teacher screens are offline-first. The phone generates the record IDs and the API accepts idempotent PUT requests, so a phone coming back online can retry without creating duplicates."
+    },
+    "api": {
+      "label": "REST API",
+      "caption": "Spring Boot, JWT",
+      "decisionTitle": "Scope comes from the token",
+      "decision": "Every query is filtered by school and user scope on the server, taken from the JWT and never from the request. One modular monolith, 12 modules, one API."
+    },
+    "db": {
+      "label": "Database",
+      "caption": "PostgreSQL 16, Flyway",
+      "decisionTitle": "Nothing changes silently",
+      "decision": "An append-only audit log records every create, edit, cancel and export, and schema changes are versioned with Flyway."
+    },
+    "outbox": {
+      "label": "Outbox",
+      "caption": "Transactional table",
+      "decisionTitle": "No notification is lost",
+      "decision": "Notifications are written to a transactional outbox table in the same transaction as the absence, so a restart cannot lose one."
+    },
+    "dispatcher": {
+      "label": "Dispatcher",
+      "caption": "Firebase, SMS",
+      "decisionTitle": "Sent separately, with retries",
+      "decision": "A separate dispatcher reads the outbox and retries failures. Guardians get a Firebase push, or a single SMS digest per day."
+    },
+    "guardian": {
+      "label": "Guardian",
+      "caption": "Informed the same day",
+      "decisionTitle": "Privacy by design",
+      "decision": "The guardian hears about an absence the same day. The system stores a birth year only, keeps no photos, and never puts phone numbers in URLs or logs."
+    }
+  },
+  "stack": {
+    "eyebrow": "Stack",
+    "title": "Java at the centre, the rest when the product needs it",
+    "core": "Core",
+    "groups": {
+      "backend": "Backend",
+      "data": "Data",
+      "mobile": "Mobile",
+      "web": "Web",
+      "tooling": "Tooling and testing"
+    }
+  },
+  "path": {
+    "eyebrow": "Path",
+    "title": "Where I trained and worked",
+    "graduationAlt": "Brahan Kessel Fopa at his graduation, holding his final-year report",
+    "internship": {
+      "title": "Software engineering intern",
+      "place": "Collège Adventiste d'Odza, Yaoundé",
+      "period": "July 2026 – December 2026",
+      "points": [
+        "Gathered requirements from six Directeurs des Études and the Surveillant Général, and wrote the functional specification for the school's replacement management system.",
+        "Built and delivered Scolarys, defended on 1 October 2026.",
+        "Supervised by M. Ngangue Samuel, computer engineer."
+      ]
+    },
+    "degree": {
+      "title": "Software Engineering degree (BAC+3)",
+      "place": "African Institute of Computer Science (IAI), Paul Biya Technological Centre of Excellence, Yaoundé",
+      "period": "2023 – 2026",
+      "points": ["Graduated in November 2026 with a bachelor's degree in software engineering."]
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title1": "Have a role or a project in mind?",
+    "title2": "Let's talk.",
+    "intro": "WhatsApp is the fastest way to reach me. Email works too.",
+    "whatsapp": "Chat on WhatsApp",
+    "email": "Send an email",
+    "whatsappMessage": "Hello Brahan, I saw your portfolio and I'd like to talk about an opportunity.",
+    "emailSubject": "Opportunity for Brahan Kessel Fopa",
+    "downloadCv": "Download CV",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email"
+  },
+  "footer": {
+    "built": "Designed and built in Yaoundé.",
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "newTab": "opens in a new tab"
+  }
+}

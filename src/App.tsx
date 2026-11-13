@@ -1,13 +1,31 @@
-import { techIcons } from '@/components/icons/techIcons'
-import { Chip } from '@/components/ui/Chip'
-import type { TechId } from '@/content/types'
+import { MotionConfig } from 'motion/react'
+
+import { CursorGlow } from '@/components/layout/CursorGlow'
+import { Footer } from '@/components/layout/Footer'
+import { Navbar } from '@/components/layout/Navbar'
+import { ScrollThread } from '@/components/layout/ScrollThread'
+import { SmoothScroll } from '@/components/layout/SmoothScroll'
+import { sectionIds } from '@/content/sections'
+import { useActiveSection } from '@/hooks/useActiveSection'
 
 export default function App() {
+  const activeId = useActiveSection(sectionIds)
+
   return (
-    <div className="flex flex-wrap gap-3 p-10">
-      {(Object.keys(techIcons) as TechId[]).map((id) => (
-        <span key={id} className="scale-150 p-4"><Chip techId={id} /></span>
-      ))}
-    </div>
+    <MotionConfig reducedMotion="user">
+      <SmoothScroll>
+        <CursorGlow />
+        <ScrollThread activeId={activeId} />
+        <Navbar activeId={activeId} />
+        <main id="main" className="relative z-10">
+          {sectionIds.map((id) => (
+            <section key={id} id={id} className="grid min-h-screen place-items-center">
+              <h2 className="font-display text-gradient text-5xl font-extrabold">{id}</h2>
+            </section>
+          ))}
+        </main>
+        <Footer />
+      </SmoothScroll>
+    </MotionConfig>
   )
 }

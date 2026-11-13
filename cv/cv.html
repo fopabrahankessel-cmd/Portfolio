@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FOPA TSEUTCHOUA Brahan Kessel — CV</title>
+    <!--
+      Source of the downloadable CV. After editing, run `npm run cv` to
+      regenerate public/cv/Brahan-Kessel-Fopa-CV.pdf. Must stay on one A4 page.
+    -->
+    <style>
+      @font-face {
+        font-family: 'Syne';
+        font-weight: 600;
+        src: url('../node_modules/@fontsource/syne/files/syne-latin-600-normal.woff2')
+          format('woff2');
+      }
+      @font-face {
+        font-family: 'Syne';
+        font-weight: 800;
+        src: url('../node_modules/@fontsource/syne/files/syne-latin-800-normal.woff2')
+          format('woff2');
+      }
+      @font-face {
+        font-family: 'Inter';
+        font-weight: 400;
+        src: url('../node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2')
+          format('woff2');
+      }
+      @font-face {
+        font-family: 'Inter';
+        font-weight: 600;
+        src: url('../node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2')
+          format('woff2');
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      :root {
+        --ink: #17130f;
+        --body: #3a332d;
+        --faint: #6f665d;
+        --line: #d9d0c5;
+        --ember: #e8452c;
+        --saffron: #f2a33a;
+        --cloth: #f4ede4;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        width: 210mm;
+        height: 297mm;
+        overflow: hidden;
+        background: #fff;
+        color: var(--body);
+        font:
+          400 8.9pt/1.42 'Inter',
+          Arial,
+          sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .band {
+        height: 5mm;
+        background: repeating-linear-gradient(
+          90deg,
+          var(--ember) 0 10px,
+          var(--cloth) 10px 14px,
+          var(--saffron) 14px 24px,
+          #0d0b0c 24px 30px
+        );
+      }
+
+      .page {
+        padding: 8mm 13mm 0;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 8mm;
+        padding-bottom: 5mm;
+        border-bottom: 1.5px dashed var(--line);
+      }
+
+      h1 {
+        font:
+          800 17pt/1.1 'Syne',
+          Arial,
+          sans-serif;
+        color: var(--ink);
+        letter-spacing: -0.01em;
+      }
+
+      .known {
+        margin-top: 1.2mm;
+        font-size: 8.5pt;
+        color: var(--faint);
+      }
+
+      .title {
+        margin-top: 2mm;
+        font:
+          600 10.5pt 'Syne',
+          Arial,
+          sans-serif;
+        color: var(--ember);
+      }
+
+      .contacts {
+        list-style: none;
+        text-align: right;
+        font-size: 8.4pt;
+        line-height: 1.6;
+        white-space: nowrap;
+      }
+
+      .contacts b {
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      .columns {
+        display: grid;
+        grid-template-columns: 1fr 55mm;
+        gap: 9mm;
+        margin-top: 5mm;
+      }
+
+      section + section {
+        margin-top: 4.6mm;
+      }
+
+      h2 {
+        display: flex;
+        align-items: center;
+        gap: 2mm;
+        margin-bottom: 2.2mm;
+        font:
+          800 9.4pt 'Syne',
+          Arial,
+          sans-serif;
+        color: var(--ink);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      h2::before {
+        content: '';
+        width: 2mm;
+        height: 2mm;
+        background: var(--ember);
+        transform: rotate(45deg);
+      }
+
+      h3 {
+        font:
+          600 9.6pt 'Inter',
+          Arial,
+          sans-serif;
+        color: var(--ink);
+      }
+
+      .meta {
+        display: flex;
+        justify-content: space-between;
+        gap: 4mm;
+        font-size: 8.3pt;
+        color: var(--faint);
+      }
+
+      .meta a {
+        color: var(--ember);
+      }
+
+      .item + .item {
+        margin-top: 3.2mm;
+      }
+
+      ul.points {
+        margin: 1.1mm 0 0 3.6mm;
+      }
+
+      ul.points li {
+        padding-left: 0.6mm;
+      }
+
+      ul.points li::marker {
+        color: var(--ember);
+      }
+
+      .tech {
+        margin-top: 1mm;
+        font-size: 8.2pt;
+        color: var(--faint);
+      }
+
+      .tech b {
+        color: var(--body);
+        font-weight: 600;
+      }
+
+      aside dl {
+        display: grid;
+        gap: 2mm;
+      }
+
+      aside dt {
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      aside dd {
+        font-size: 8.5pt;
+      }
+
+      aside p {
+        font-size: 8.5pt;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="band"></div>
+    <div class="page">
+      <header>
+        <div>
+          <h1>FOPA TSEUTCHOUA<br />Brahan Kessel</h1>
+          <p class="known">Known as Brahan Kessel Fopa</p>
+          <p class="title">Backend-focused Software Engineer</p>
+        </div>
+        <ul class="contacts">
+          <li>Yaoundé, Cameroon</li>
+          <li><b>Phone / WhatsApp</b> <a href="https://wa.me/237640154719">+237 640 154 719</a></li>
+          <li><a href="mailto:fopabrahankessel@gmail.com">fopabrahankessel@gmail.com</a></li>
+          <li>
+            <a href="https://github.com/fopabrahankessel-cmd">github.com/fopabrahankessel-cmd</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/fopa-tseutchoua-657b10318"
+              >linkedin.com/in/fopa-tseutchoua-657b10318</a
+            >
+          </li>
+        </ul>
+      </header>
+
+      <div class="columns">
+        <main>
+          <section>
+            <h2>Profile</h2>
+            <p>
+              Software engineer who has spent two years building real software, with three systems
+              delivered solo. Java is my home language: I design and ship backend services with
+              Spring Boot, backed by PostgreSQL and Microsoft SQL Server. I also build mobile apps
+              with Flutter and React Native, so I understand a product from the database to the
+              phone in a user's hand. Open to a full-time role or freelance work.
+            </p>
+          </section>
+
+          <section>
+            <h2>Experience</h2>
+            <div class="item">
+              <div class="meta">
+                <h3>Software Engineering Intern</h3>
+                <span>July 2026 – December 2026</span>
+              </div>
+              <p class="meta"><span>Collège Adventiste d'Odza, Yaoundé (3,000+ students)</span></p>
+              <ul class="points">
+                <li>
+                  Gathered requirements from six Directeurs des Études and the Surveillant Général,
+                  and wrote the functional specification for the school's replacement management
+                  system.
+                </li>
+                <li>
+                  Built and delivered Scolarys as sole developer; defended on 1 October 2026.
+                  Supervisor: M. Ngangue Samuel, computer engineer.
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2>Projects</h2>
+
+            <div class="item">
+              <div class="meta">
+                <h3>SchoolLink — attendance and parent notification</h3>
+                <a href="https://github.com/fopabrahankessel-cmd/schoollink">GitHub</a>
+              </div>
+              <p>
+                Platform for secondary schools in Cameroon: teachers record attendance per period on
+                a phone and every absence reaches the guardian the same day by Firebase push or one
+                daily SMS digest. Sole developer: specification, architecture, backend, web
+                dashboard, Android app and deployment.
+              </p>
+              <ul class="points">
+                <li>
+                  Modular monolith (12 modules, one REST API); every query scoped by school and user
+                  on the server from the JWT, never from the request.
+                </li>
+                <li>
+                  Transactional outbox with a separate dispatcher and retries, so no notification is
+                  lost on restart; append-only audit log.
+                </li>
+                <li>
+                  Offline-first teacher app with device-generated UUIDs and idempotent PUT
+                  endpoints, so retries never create duplicates.
+                </li>
+              </ul>
+              <p class="tech">
+                <b>Tech:</b> Java 21, Spring Boot 4, Spring Security + JWT, PostgreSQL 16, Flyway,
+                Firebase Admin SDK, React, TypeScript, Flutter (Riverpod, drift), Docker Compose,
+                Caddy, JUnit 5, Testcontainers.
+              </p>
+            </div>
+
+            <div class="item">
+              <div class="meta">
+                <h3>Scolarys — school management system</h3>
+                <span>Private code</span>
+              </div>
+              <p>
+                Replaced a legacy .NET desktop application at Collège Adventiste d'Odza. Covers
+                enrolment, timetabling, mark entry, averages and ranking, discipline, bilingual
+                report cards, tuition in four instalments and a parent portal.
+              </p>
+              <ul class="points">
+                <li>Designed the domain model: 8 packages, about 107 classes.</li>
+                <li>
+                  Over 200 teachers share at most 5 desktop computers in mark-entry season, so mark
+                  entry moved to a mobile app that works offline.
+                </li>
+              </ul>
+              <p class="tech">
+                <b>Tech:</b> Spring Boot, Next.js, Microsoft SQL Server, React Native (Expo), Campay
+                (MTN / Orange Mobile Money), SMS.
+              </p>
+            </div>
+
+            <div class="item">
+              <div class="meta">
+                <h3>AICS Report Hub — final-year report submissions</h3>
+                <a href="https://github.com/fopabrahankessel-cmd/IAI-Defense-report-management-"
+                  >GitHub</a
+                >
+              </div>
+              <p>
+                Multi-campus Django platform: four-role access control scoped by campus, one-time
+                upload codes validated live, automatic first-page PDF previews, public search, and
+                grading with feedback. Sole developer.
+              </p>
+              <p class="tech"><b>Tech:</b> Python 3.13, Django 6, PostgreSQL / SQLite, PyMuPDF.</p>
+            </div>
+          </section>
+        </main>
+
+        <aside>
+          <section>
+            <h2>Skills</h2>
+            <dl>
+              <div>
+                <dt>Backend</dt>
+                <dd>Java, Spring Boot, Spring Security, JWT, REST APIs, Python, Django</dd>
+              </div>
+              <div>
+                <dt>Data</dt>
+                <dd>PostgreSQL, Microsoft SQL Server, Flyway, SQLite</dd>
+              </div>
+              <div>
+                <dt>Mobile</dt>
+                <dd>Flutter, React Native (Expo)</dd>
+              </div>
+              <div>
+                <dt>Web</dt>
+                <dd>React, Next.js, TypeScript</dd>
+              </div>
+              <div>
+                <dt>Tooling and testing</dt>
+                <dd>Git, GitHub, GitLab, Docker, JUnit 5, Testcontainers, Firebase</dd>
+              </div>
+            </dl>
+          </section>
+
+          <section>
+            <h2>Education</h2>
+            <h3>Software Engineering degree (BAC+3)</h3>
+            <p>
+              African Institute of Computer Science (IAI), Paul Biya Technological Centre of
+              Excellence, Yaoundé
+            </p>
+            <p class="meta"><span>Graduated November 2026</span></p>
+          </section>
+
+          <section>
+            <h2>Languages</h2>
+            <p>French, English</p>
+          </section>
+
+          <section>
+            <h2>Portfolio</h2>
+            <p>
+              Case studies and an interactive walk-through of SchoolLink are on my portfolio site.
+            </p>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>

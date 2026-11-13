@@ -26,7 +26,7 @@ const item: Variants = {
 
 export function Hero() {
   const { t } = useTranslation()
-  const tilt = useTilt<HTMLDivElement>(7)
+  const { ref: tiltRef, style: tiltStyle } = useTilt<HTMLDivElement>(7)
 
   return (
     <section
@@ -50,7 +50,7 @@ export function Hero() {
           <motion.h1
             id="hero-title"
             variants={item}
-            className="font-display text-cloth mt-6 text-[2.6rem] leading-[0.98] font-extrabold tracking-tight sm:text-6xl lg:text-7xl"
+            className="font-display text-cloth mt-6 text-[2.5rem] leading-[1] font-extrabold tracking-tight sm:text-5xl lg:text-[3.5rem]"
           >
             {t('hero.title1')}
             <br />
@@ -94,7 +94,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.35, ease: [0.21, 0.6, 0.35, 1] }}
           className="relative mx-auto w-full max-w-[19rem] sm:max-w-sm lg:max-w-none"
         >
-          <motion.div ref={tilt.ref} style={tilt.style}>
+          <motion.div ref={tiltRef} style={tiltStyle}>
             <StripeFrame>
               <img
                 src={portrait}

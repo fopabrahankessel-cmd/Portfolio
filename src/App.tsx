@@ -6,6 +6,8 @@ import { Navbar } from '@/components/layout/Navbar'
 import { ScrollThread } from '@/components/layout/ScrollThread'
 import { SmoothScroll } from '@/components/layout/SmoothScroll'
 import { sectionIds } from '@/content/sections'
+import { About } from '@/features/about/About'
+import { Hero } from '@/features/hero/Hero'
 import { useActiveSection } from '@/hooks/useActiveSection'
 
 export default function App() {
@@ -18,7 +20,9 @@ export default function App() {
         <ScrollThread activeId={activeId} />
         <Navbar activeId={activeId} />
         <main id="main" className="relative z-10">
-          {sectionIds.map((id) => (
+          <Hero />
+          <About />
+          {sectionIds.slice(2).map((id) => (
             <section key={id} id={id} className="grid min-h-screen place-items-center">
               <h2 className="font-display text-gradient text-5xl font-extrabold">{id}</h2>
             </section>

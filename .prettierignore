@@ -1,0 +1,6 @@
+dist
+node_modules
+.superpowers
+_scaffold
+public/cv
+package-lock.json

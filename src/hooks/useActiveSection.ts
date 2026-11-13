@@ -1,25 +1,40 @@
 import { useEffect, useState } from 'react'
 
-/** Returns the id of the section currently crossing the middle of the viewport. */
+/**
+ * Returns the id of the section crossing the middle of the viewport.
+ *
+ * Sections are looked up by id on every measurement rather than observed once,
+ * because lazily loaded sections replace their placeholder elements.
+ */
 export function useActiveSection(ids: readonly string[]): string {
   const [active, setActive] = useState(ids[0] ?? '')
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) setActive(entry.target.id)
-        }
-      },
-      // A thin band across the middle of the screen: one section at a time.
-      { rootMargin: '-45% 0px -54% 0px' },
-    )
+    let frame = 0
 
-    for (const id of ids) {
-      const element = document.getElementById(id)
-      if (element) observer.observe(element)
+    const measure = () => {
+      frame = 0
+      const middle = window.innerHeight / 2
+      let current = ids[0] ?? ''
+      for (const id of ids) {
+        const element = document.getElementById(id)
+        if (element && element.getBoundingClientRect().top <= middle) current = id
+      }
+      setActive(current)
     }
-    return () => observer.disconnect()
+
+    const schedule = () => {
+      if (frame === 0) frame = window.requestAnimationFrame(measure)
+    }
+
+    measure()
+    window.addEventListener('scroll', schedule, { passive: true })
+    window.addEventListener('resize', schedule)
+    return () => {
+      window.removeEventListener('scroll', schedule)
+      window.removeEventListener('resize', schedule)
+      if (frame !== 0) window.cancelAnimationFrame(frame)
+    }
   }, [ids])
 
   return active

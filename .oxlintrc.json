@@ -18,5 +18,15 @@
     "dist",
     "_scaffold",
     ".superpowers"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "src/features/work/ProjectCard.tsx"
+      ],
+      "rules": {
+        "react/only-export-components": "off"
+      }
+    }
   ]
 }

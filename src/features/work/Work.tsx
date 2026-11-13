@@ -59,7 +59,12 @@ export default function Work() {
 
   return (
     <Section id="work" labelledBy="work-title">
-      <SectionHeading id="work-title" index="02" eyebrow={t('work.eyebrow')} title={t('work.title')} />
+      <SectionHeading
+        id="work-title"
+        index="02"
+        eyebrow={t('work.eyebrow')}
+        title={t('work.title')}
+      />
 
       <div className="space-y-6">
         {featured.map((project) => (

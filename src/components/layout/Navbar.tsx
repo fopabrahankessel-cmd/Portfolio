@@ -93,13 +93,7 @@ export function Navbar({ activeId }: NavbarProps) {
 
         <div className="flex items-center gap-2.5">
           <LanguageSwitch />
-          <Button
-            href={whatsappUrl}
-            external
-            size="sm"
-            icon={<WhatsAppIcon aria-hidden="true" />}
-            className="hidden sm:inline-flex"
-          >
+          <Button href={whatsappUrl} external size="sm" icon={<WhatsAppIcon aria-hidden="true" />}>
             {t('nav.whatsapp')}
           </Button>
           <button
@@ -142,16 +136,6 @@ export function Navbar({ activeId }: NavbarProps) {
                   </a>
                 </li>
               ))}
-              <li className="pt-3 sm:hidden">
-                <Button
-                  href={whatsappUrl}
-                  external
-                  icon={<WhatsAppIcon aria-hidden="true" />}
-                  className="w-full"
-                >
-                  {t('hero.ctaWhatsapp')}
-                </Button>
-              </li>
             </ul>
           </motion.div>
         ) : null}

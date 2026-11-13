@@ -15,7 +15,12 @@ export default function Path() {
 
   return (
     <Section id="path" labelledBy="path-title">
-      <SectionHeading id="path-title" index="04" eyebrow={t('path.eyebrow')} title={t('path.title')} />
+      <SectionHeading
+        id="path-title"
+        index="04"
+        eyebrow={t('path.eyebrow')}
+        title={t('path.title')}
+      />
 
       <div className="grid items-start gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:gap-16">
         <ol className="relative space-y-10">

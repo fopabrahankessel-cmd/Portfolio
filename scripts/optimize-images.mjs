@@ -19,7 +19,13 @@ await mkdir(outDir, { recursive: true })
 for (const { source, target, width } of images) {
   const input = join(root, 'source-assets', source)
   const output = join(outDir, target)
-  await sharp(input).rotate().resize({ width, withoutEnlargement: true }).webp({ quality: 80 }).toFile(output)
+  await sharp(input)
+    .rotate()
+    .resize({ width, withoutEnlargement: true })
+    .webp({ quality: 80 })
+    .toFile(output)
   const [before, after] = await Promise.all([stat(input), stat(output)])
-  console.log(`${source} ${(before.size / 1024).toFixed(0)} kB -> ${target} ${(after.size / 1024).toFixed(0)} kB`)
+  console.log(
+    `${source} ${(before.size / 1024).toFixed(0)} kB -> ${target} ${(after.size / 1024).toFixed(0)} kB`,
+  )
 }

@@ -99,7 +99,9 @@ function Header({ index }: { index: string }) {
 
 function Label({ children }: { children: ReactNode }) {
   return (
-    <p className="text-faint mb-2.5 font-mono text-[11px] tracking-[0.18em] uppercase">{children}</p>
+    <p className="text-faint mb-2.5 font-mono text-[11px] tracking-[0.18em] uppercase">
+      {children}
+    </p>
   )
 }
 

@@ -28,16 +28,16 @@ export function Footer() {
       <div aria-hidden="true" className="bg-stripes h-1.5 w-full opacity-90" />
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-5 px-5 py-8 text-sm sm:flex-row sm:px-8">
         <p className="text-faint text-center sm:text-left">
-          <span className="text-cloth font-semibold">{profile.name}</span> · © 2026 ·{' '}
-          {t('footer.built')}
+          <span className="text-cloth font-semibold">{profile.name}</span> · ©{' '}
+          {new Date().getFullYear()} · {t('footer.built')}
         </p>
         <ul className="flex items-center gap-2">
           {links.map((link) => (
             <li key={link.label}>
               <a
                 href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={link.href.startsWith('http') ? '_blank' : undefined}
+                rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 aria-label={link.label}
                 className="border-line text-muted hover:border-saffron/70 hover:text-cloth grid size-10 place-items-center rounded-xl border transition-colors"
               >

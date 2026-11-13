@@ -46,7 +46,7 @@ export function HeroStats() {
   ]
 
   return (
-    <dl className="border-line grid grid-cols-1 gap-x-8 gap-y-5 border-t border-dashed pt-7 xs:grid-cols-3">
+    <dl className="border-line xs:grid-cols-3 grid grid-cols-1 gap-x-8 gap-y-5 border-t border-dashed pt-7">
       {stats.map((stat) => (
         <div key={stat.label} className="flex flex-col-reverse gap-1">
           <dt className="text-faint max-w-[22ch] text-xs leading-snug">{stat.label}</dt>

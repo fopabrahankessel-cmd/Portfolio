@@ -16,10 +16,7 @@ export function SectionHeading({ id, eyebrow, title, index }: SectionHeadingProp
         <span aria-hidden="true" className="bg-ember inline-block size-2 rotate-45" />
         {index ? <span className="text-faint">{index}</span> : null}
         <span>{eyebrow}</span>
-        <span
-          aria-hidden="true"
-          className="border-line h-px w-16 border-t border-dashed sm:w-24"
-        />
+        <span aria-hidden="true" className="border-line h-px w-16 border-t border-dashed sm:w-24" />
       </p>
       <h2
         id={id}

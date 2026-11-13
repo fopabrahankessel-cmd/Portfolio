@@ -15,7 +15,12 @@ export default function Contact() {
   const mailUrl = `mailto:${profile.email}?subject=${encodeURIComponent(t('contact.emailSubject'))}`
 
   const secondary = [
-    { label: 'GitHub', href: profile.github, icon: <GitHubIcon aria-hidden="true" />, external: true },
+    {
+      label: 'GitHub',
+      href: profile.github,
+      icon: <GitHubIcon aria-hidden="true" />,
+      external: true,
+    },
     {
       label: 'LinkedIn',
       href: profile.linkedin,

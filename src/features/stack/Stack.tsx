@@ -55,7 +55,12 @@ export default function Stack() {
 
   return (
     <Section id="stack" labelledBy="stack-title">
-      <SectionHeading id="stack-title" index="03" eyebrow={t('stack.eyebrow')} title={t('stack.title')} />
+      <SectionHeading
+        id="stack-title"
+        index="03"
+        eyebrow={t('stack.eyebrow')}
+        title={t('stack.title')}
+      />
 
       <div className="grid gap-5 lg:grid-cols-6">
         {stackGroups.map((group, index) => (

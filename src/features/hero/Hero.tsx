@@ -52,8 +52,7 @@ export function Hero() {
             variants={item}
             className="font-display text-cloth mt-6 text-[2.5rem] leading-[1] font-extrabold tracking-tight sm:text-5xl lg:text-[3.5rem]"
           >
-            {t('hero.title1')}
-            <br />
+            {t('hero.title1')} <br />
             <span className="text-gradient">{t('hero.title2')}</span>
           </motion.h1>
 

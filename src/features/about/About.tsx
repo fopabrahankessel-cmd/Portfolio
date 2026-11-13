@@ -18,7 +18,12 @@ export function About() {
 
   return (
     <Section id="about" labelledBy="about-title">
-      <SectionHeading id="about-title" index="01" eyebrow={t('about.eyebrow')} title={t('about.title')} />
+      <SectionHeading
+        id="about-title"
+        index="01"
+        eyebrow={t('about.eyebrow')}
+        title={t('about.title')}
+      />
 
       <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
         <Reveal className="space-y-5">

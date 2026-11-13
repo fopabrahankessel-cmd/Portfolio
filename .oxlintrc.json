@@ -1,10 +1,6 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [
-    "react",
-    "typescript",
-    "oxc"
-  ],
+  "plugins": ["react", "typescript", "oxc"],
   "rules": {
     "react/rules-of-hooks": "error",
     "react/only-export-components": [
@@ -14,16 +10,10 @@
       }
     ]
   },
-  "ignorePatterns": [
-    "dist",
-    "_scaffold",
-    ".superpowers"
-  ],
+  "ignorePatterns": ["dist", "_scaffold", ".superpowers"],
   "overrides": [
     {
-      "files": [
-        "src/features/work/ProjectCard.tsx"
-      ],
+      "files": ["src/features/work/ProjectCard.tsx"],
       "rules": {
         "react/only-export-components": "off"
       }

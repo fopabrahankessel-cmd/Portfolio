@@ -18,18 +18,21 @@ anywhere on the page.
 ## 2. Goals, non-goals, anti-goals
 
 Goals
+
 - One scrolling page, highly interactive, fast, fully responsive (360px up).
 - English and French, switchable.
 - A downloadable one-page CV (PDF), written from the same content.
 - Content editable without touching layout code.
 
 Non-goals
+
 - No backend, no contact form, no blog, no CMS, no analytics.
 - No light theme. The site is dark only.
 - Deployment and a domain name are not part of this work. The build output must
   be a plain static folder that any static host can serve.
 
 Anti-goals
+
 - Overstating experience. He has no prior salaried employment. Never write
   "two years of professional experience". The agreed line is
   "two years building real software, three systems delivered solo".
@@ -44,16 +47,16 @@ Dark, modern, with stitched motifs inspired by Cameroonian Toghu embroidery.
 The approved sketch is `.superpowers/brainstorm/843-1794587132/content/themes.html`
 (option C). Tokens from that sketch:
 
-| Token | Value | Use |
-|---|---|---|
-| ink | `#0d0b0c` | page background |
-| surface | `#171314` (builder may tune) | cards |
-| line | `#3a302c` | borders |
-| cloth | `#f4ede4` | primary text, white stitches |
-| muted | `#bdb2a5` | body text |
-| ember | `#e8452c` | red accent |
-| saffron | `#f2a33a` | orange accent |
-| live | `#4ade80` | "available" dot only |
+| Token   | Value                        | Use                          |
+| ------- | ---------------------------- | ---------------------------- |
+| ink     | `#0d0b0c`                    | page background              |
+| surface | `#171314` (builder may tune) | cards                        |
+| line    | `#3a302c`                    | borders                      |
+| cloth   | `#f4ede4`                    | primary text, white stitches |
+| muted   | `#bdb2a5`                    | body text                    |
+| ember   | `#e8452c`                    | red accent                   |
+| saffron | `#f2a33a`                    | orange accent                |
+| live    | `#4ade80`                    | "available" dot only         |
 
 - Signature gradient: ember → saffron, used for the key headline words and the
   primary button. Use it sparingly.
@@ -98,6 +101,7 @@ The active section is highlighted while scrolling.
 ## 5. Content (source of truth)
 
 Identity
+
 - Display name: Brahan Kessel Fopa. Full legal name for the CV:
   FOPA TSEUTCHOUA Brahan Kessel.
 - Title: Backend-focused Software Engineer. Location: Yaoundé, Cameroon.
@@ -108,6 +112,7 @@ Identity
 - Seeking: full-time role or freelance clients.
 
 Bio (English, builder may polish but not add facts)
+
 > I'm a software engineer who has spent two years building real software, with
 > three systems delivered solo. Java is my home language: I design and ship
 > backend services with Spring Boot, backed by PostgreSQL and MS SQL Server.
@@ -115,6 +120,7 @@ Bio (English, builder may polish but not add facts)
 > product from the database to the phone in a user's hand.
 
 Project 1 — SchoolLink (flagship)
+
 - School attendance and parent-notification platform for secondary schools in
   Cameroon. Teachers record attendance per period on a phone, assistant
   discipline masters record lateness at the gate, and every absence reaches the
@@ -137,6 +143,7 @@ Project 1 — SchoolLink (flagship)
 - Link: https://github.com/fopabrahankessel-cmd/schoollink
 
 Project 2 — Scolarys (private code, describe only)
+
 - School management system built during the academic internship at Collège
   Adventiste d'Odza (Yaoundé, 3,000+ students), replacing a legacy .NET desktop
   application. Covers enrolment, academic structure across francophone and
@@ -155,6 +162,7 @@ Project 2 — Scolarys (private code, describe only)
 - Status: delivered and defended on 1 October 2026.
 
 Project 3 — AICS Report Hub
+
 - Django platform for final-year report submissions across multiple campuses.
   Campus admins register students and supervisors and bulk-assign students;
   supervisors issue one-time upload codes; students upload a PDF, which gets an
@@ -167,6 +175,7 @@ Project 3 — AICS Report Hub
 - Link: https://github.com/fopabrahankessel-cmd/IAI-Defense-report-management-
 
 Path
+
 - Software engineering intern — Collège Adventiste d'Odza, Yaoundé.
   July 2026 – December 2026. Supervisor: M. NGANGUE Samuel (computer engineer).
   Gathered requirements and produced the functional specification; built and
@@ -177,6 +186,7 @@ Path
 - No certifications section.
 
 Stack groups
+
 - Backend (core): Java, Spring Boot, Spring Security/JWT. Also: Python/Django.
 - Data: PostgreSQL, Microsoft SQL Server, Flyway, SQLite.
 - Mobile: Flutter, React Native (Expo).
@@ -184,6 +194,7 @@ Stack groups
 - Tooling: Git, GitHub, GitLab, Docker, JUnit 5, Testcontainers, Firebase.
 
 Photos (already saved in the repo)
+
 - `source-assets/portrait.jpg` — hero and about.
 - `source-assets/graduation.jpg` — Path, beside education.
 - Builder converts them to optimised WebP/AVIF at suitable sizes.

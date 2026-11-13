@@ -29,7 +29,15 @@ export function DiamondPattern({ className }: { className?: string }) {
             strokeWidth="1"
             strokeDasharray="2 5"
           />
-          <rect x="37.5" y="37.5" width="5" height="5" transform="rotate(45 40 40)" fill="var(--color-ember)" fillOpacity=".8" />
+          <rect
+            x="37.5"
+            y="37.5"
+            width="5"
+            height="5"
+            transform="rotate(45 40 40)"
+            fill="var(--color-ember)"
+            fillOpacity=".8"
+          />
           <circle cx="0" cy="0" r="2" fill="var(--color-saffron)" fillOpacity=".7" />
           <circle cx="80" cy="0" r="2" fill="var(--color-saffron)" fillOpacity=".7" />
           <circle cx="0" cy="80" r="2" fill="var(--color-saffron)" fillOpacity=".7" />

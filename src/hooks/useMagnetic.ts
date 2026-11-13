@@ -19,7 +19,7 @@ export function useMagnetic<T extends HTMLElement>(
 
   useEffect(() => {
     const element = ref.current
-    if (!element || !enabled) return
+    if (!element || !enabled || strength === 0) return
 
     const onMove = (event: PointerEvent) => {
       const rect = element.getBoundingClientRect()

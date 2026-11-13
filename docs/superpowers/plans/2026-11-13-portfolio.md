@@ -87,23 +87,69 @@ src/features/hero/, about/, work/, stack/, path/, contact/
 **Files:** `src/content/*`, `src/locales/*`, `src/i18n/*`, `src/lib/whatsapp.ts`, tests beside each (`*.test.ts`), `src/locales/locales.test.ts`.
 
 **Produces:**
+
 ```ts
 // content/types.ts
-export type TechId = 'java'|'springBoot'|'springSecurity'|'python'|'django'|'postgresql'|'mssql'|'flyway'|'sqlite'|'flutter'|'reactNative'|'react'|'nextjs'|'typescript'|'git'|'github'|'gitlab'|'docker'|'junit'|'testcontainers'|'firebase';
-export interface Project { id: 'schoollink'|'scolarys'|'aics'; featured: boolean; isPrivate: boolean; repoUrl?: string; techIds: TechId[]; decisionCount: number }
-export interface FlowNode { id: string; techId?: TechId }          // order in array = flow order
-export interface StackGroup { id: 'backend'|'data'|'mobile'|'web'|'tooling'; items: { techId: TechId; core?: boolean }[] }
-export interface TimelineEntry { id: 'internship'|'degree'; photo?: 'graduation' }
+export type TechId =
+  | 'java'
+  | 'springBoot'
+  | 'springSecurity'
+  | 'python'
+  | 'django'
+  | 'postgresql'
+  | 'mssql'
+  | 'flyway'
+  | 'sqlite'
+  | 'flutter'
+  | 'reactNative'
+  | 'react'
+  | 'nextjs'
+  | 'typescript'
+  | 'git'
+  | 'github'
+  | 'gitlab'
+  | 'docker'
+  | 'junit'
+  | 'testcontainers'
+  | 'firebase'
+export interface Project {
+  id: 'schoollink' | 'scolarys' | 'aics'
+  featured: boolean
+  isPrivate: boolean
+  repoUrl?: string
+  techIds: TechId[]
+  decisionCount: number
+}
+export interface FlowNode {
+  id: string
+  techId?: TechId
+} // order in array = flow order
+export interface StackGroup {
+  id: 'backend' | 'data' | 'mobile' | 'web' | 'tooling'
+  items: { techId: TechId; core?: boolean }[]
+}
+export interface TimelineEntry {
+  id: 'internship' | 'degree'
+  photo?: 'graduation'
+}
 // content/profile.ts
-export const profile: { whatsappNumber: '237640154719'; phoneDisplay: '+237 640 154 719'; email: string; github: string; linkedin: string; cvPath: '/cv/Brahan-Kessel-Fopa-CV.pdf' }
+export const profile: {
+  whatsappNumber: '237640154719'
+  phoneDisplay: '+237 640 154 719'
+  email: string
+  github: string
+  linkedin: string
+  cvPath: '/cv/Brahan-Kessel-Fopa-CV.pdf'
+}
 // lib/whatsapp.ts
 export function buildWhatsAppUrl(number: string, message: string): string
 // i18n/detectLanguage.ts
 export type Lang = 'en' | 'fr'
 export function detectLanguage(stored: string | null, navigatorLang: string | undefined): Lang
-export function readStoredLanguage(): string | null      // never throws
-export function storeLanguage(lang: Lang): void          // never throws
+export function readStoredLanguage(): string | null // never throws
+export function storeLanguage(lang: Lang): void // never throws
 ```
+
 Locale key scheme: `nav.*`, `hero.*`, `about.*`, `work.title`, `projects.<id>.{name,summary,role,status,decisions.<n>.{title,body}}`, `flow.<nodeId>.{label,decision}`, `stack.groups.<id>`, `path.<id>.{title,place,period,points}`, `contact.*`, `common.*`. Text for each key comes from spec section 5; French is a faithful translation.
 
 - [ ] Step 1: Write failing tests:
@@ -123,6 +169,7 @@ Locale key scheme: `nav.*`, `hero.*`, `about.*`, `work.title`, `projects.<id>.{n
 **Consumes:** `TechId`, theme utilities.
 
 **Produces:**
+
 ```ts
 // icons/techIcons.ts
 export interface TechIconDef { label: string; Icon: IconType; color: string }
@@ -146,6 +193,7 @@ useMagnetic<T extends HTMLElement>(strength = 0.25): { ref: RefObject<T>; style:
 useActiveSection(ids: string[]): string
 usePointerFine(): boolean                               // matchMedia('(pointer: fine)')
 ```
+
 Use `useReducedMotion` from `motion/react` for the reduced-motion signal. For Java and Microsoft SQL Server pick an icon that exists in the installed `react-icons` (check `fa`, `di`, `si`, `tb`, `devicons`); if none is recognisable, add a small inline SVG component.
 
 - [ ] Step 1: Write failing test `useTilt.test.tsx`: with `matchMedia` mocked so `(prefers-reduced-motion: reduce)` matches, a component using `useTilt` renders with no `transform` after a `pointermove` event.

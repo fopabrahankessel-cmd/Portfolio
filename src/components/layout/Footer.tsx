@@ -5,6 +5,9 @@ import { GitHubIcon, LinkedInIcon, WhatsAppIcon } from '@/components/icons/Brand
 import { profile } from '@/content/profile'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
+/** Read once at load: rendering must stay pure. */
+const YEAR = new Date().getFullYear()
+
 export function Footer() {
   const { t } = useTranslation()
 
@@ -28,8 +31,8 @@ export function Footer() {
       <div aria-hidden="true" className="bg-stripes h-1.5 w-full opacity-90" />
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-5 px-5 py-8 text-sm sm:flex-row sm:px-8">
         <p className="text-faint text-center sm:text-left">
-          <span className="text-cloth font-semibold">{profile.name}</span> · ©{' '}
-          {new Date().getFullYear()} · {t('footer.built')}
+          <span className="text-cloth font-semibold">{profile.name}</span> · © {YEAR} ·{' '}
+          {t('footer.built')}
         </p>
         <ul className="flex items-center gap-2">
           {links.map((link) => (

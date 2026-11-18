@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 
 import { GitHubIcon, LinkedInIcon, WhatsAppIcon } from '@/components/icons/BrandIcons'
 import { profile } from '@/content/profile'
+import { openConsentBanner } from '@/lib/consent'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
 /** Read once at load: rendering must stay pure. */
@@ -30,10 +31,33 @@ export function Footer() {
     <footer className="relative">
       <div aria-hidden="true" className="bg-stripes h-1.5 w-full opacity-90" />
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-5 px-5 py-8 text-sm sm:flex-row sm:px-8">
-        <p className="text-faint text-center sm:text-left">
-          <span className="text-cloth font-semibold">{profile.name}</span> · © {YEAR} ·{' '}
-          {t('footer.built')}
-        </p>
+        <div className="text-faint text-center sm:text-left">
+          <p>
+            <span className="text-cloth font-semibold">{profile.name}</span> · © {YEAR} ·{' '}
+            {t('footer.built')}
+          </p>
+          <ul className="mt-2 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs sm:justify-start">
+            <li>
+              <a href="/privacy" className="hover:text-cloth underline-offset-4 hover:underline">
+                {t('footer.privacy')}
+              </a>
+            </li>
+            <li>
+              <a href="/terms" className="hover:text-cloth underline-offset-4 hover:underline">
+                {t('footer.terms')}
+              </a>
+            </li>
+            <li>
+              <button
+                type="button"
+                onClick={openConsentBanner}
+                className="hover:text-cloth underline-offset-4 hover:underline"
+              >
+                {t('footer.cookies')}
+              </button>
+            </li>
+          </ul>
+        </div>
         <ul className="flex items-center gap-2">
           {links.map((link) => (
             <li key={link.label}>

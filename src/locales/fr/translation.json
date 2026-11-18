@@ -198,9 +198,138 @@
   },
   "footer": {
     "built": "Conçu et développé à Yaoundé.",
-    "rights": "Tous droits réservés."
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions générales",
+    "cookies": "Gérer les cookies"
   },
   "common": {
     "newTab": "s'ouvre dans un nouvel onglet"
+  },
+  "page": {
+    "home": "Accueil du portfolio",
+    "back": "Retour au portfolio"
+  },
+  "consent": {
+    "title": "Mesure d'audience",
+    "body": "Avec votre accord, j'utilise Vercel Web Analytics pour compter les visites de façon anonyme et sans cookie publicitaire. Rien n'est chargé si vous refusez.",
+    "learnMore": "Lire la politique de confidentialité",
+    "accept": "Accepter",
+    "refuse": "Refuser"
+  },
+  "notFound": {
+    "eyebrow": "Erreur 404",
+    "title": "Cette page n'existe pas",
+    "body": "Le lien est peut-être erroné ou la page a été déplacée. Le portfolio, lui, est toujours là.",
+    "cta": "Retour au portfolio"
+  },
+  "legal": {
+    "eyebrow": "Informations légales",
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "updated": "Dernière mise à jour : 18 novembre 2026",
+      "intro": "Ce site est le portfolio personnel de {{name}}. Cette page explique quelles données sont traitées lorsque vous le consultez, pourquoi, et comment exercer vos droits.",
+      "sections": {
+        "1": {
+          "title": "Responsable du traitement",
+          "body": ["{{name}}, Yaoundé, Cameroun. Contact : {{email}}."]
+        },
+        "2": {
+          "title": "Données collectées",
+          "body": [
+            "Le site ne comporte aucun formulaire et ne crée aucun compte.",
+            "Préférences enregistrées dans votre navigateur (stockage local, pas de cookie) : la langue choisie et votre choix concernant la mesure d'audience. Ces informations ne quittent pas votre appareil.",
+            "Mesure d'audience, uniquement si vous l'acceptez : Vercel Web Analytics et Vercel Speed Insights enregistrent les pages vues, le site d'origine, le pays, le type d'appareil, le navigateur et des mesures de performance. Ces outils n'utilisent pas de cookie et ne permettent pas de vous identifier personnellement.",
+            "Journaux techniques : comme tout hébergeur, Vercel traite l'adresse IP et les informations de la requête pour servir les pages et assurer la sécurité du service."
+          ]
+        },
+        "3": {
+          "title": "Finalités et bases légales",
+          "body": [
+            "Afficher le site et le protéger : intérêt légitime.",
+            "Mesurer l'audience et la vitesse du site pour l'améliorer : votre consentement, que vous pouvez retirer à tout moment."
+          ]
+        },
+        "4": {
+          "title": "Contact par WhatsApp ou par e-mail",
+          "body": [
+            "Si vous me contactez par WhatsApp ou par e-mail, j'utilise vos coordonnées et votre message uniquement pour vous répondre. Ces échanges sont également soumis aux conditions de WhatsApp (Meta) ou de votre fournisseur de messagerie. Je les conserve le temps nécessaire à notre échange, et au plus trois ans après le dernier contact."
+          ]
+        },
+        "5": {
+          "title": "Destinataires et transferts",
+          "body": [
+            "Les données techniques et d'audience sont traitées par l'hébergeur, Vercel Inc., situé aux États-Unis. Vercel encadre ces transferts par des clauses contractuelles types. Aucune donnée n'est vendue ni utilisée à des fins publicitaires."
+          ]
+        },
+        "6": {
+          "title": "Durée de conservation",
+          "body": [
+            "Votre choix concernant la mesure d'audience est conservé 13 mois, puis la question vous est reposée. Les statistiques d'audience sont agrégées et conservées selon la politique de Vercel."
+          ]
+        },
+        "7": {
+          "title": "Vos droits",
+          "body": [
+            "Conformément à la réglementation applicable à la protection des données personnelles, notamment le RGPD pour les visiteurs de l'Union européenne, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition et de limitation. Écrivez à {{email}}. Vous pouvez aussi saisir l'autorité de protection des données de votre pays.",
+            "Pour retirer votre consentement à la mesure d'audience, utilisez le lien « Gérer les cookies » en bas de chaque page."
+          ]
+        }
+      }
+    },
+    "terms": {
+      "title": "Conditions générales d'utilisation",
+      "updated": "Dernière mise à jour : 18 novembre 2026",
+      "intro": "Les présentes conditions encadrent l'utilisation de ce site. En le consultant, vous les acceptez.",
+      "sections": {
+        "1": {
+          "title": "Éditeur du site",
+          "body": ["{{name}}, ingénieur logiciel, Yaoundé, Cameroun. Contact : {{email}}."]
+        },
+        "2": {
+          "title": "Hébergement",
+          "body": [
+            "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis (vercel.com)."
+          ]
+        },
+        "3": {
+          "title": "Objet du site",
+          "body": [
+            "Ce site présente le parcours, les compétences et les projets de {{name}}, afin de permettre à des recruteurs et à des clients de le contacter. Il est fourni gratuitement et à titre informatif."
+          ]
+        },
+        "4": {
+          "title": "Propriété intellectuelle",
+          "body": [
+            "Les textes, photographies, illustrations, le logo et le code de ce site appartiennent à {{name}}, sauf mention contraire. Toute reproduction ou réutilisation sans autorisation écrite est interdite. Les noms et logos de technologies cités appartiennent à leurs propriétaires respectifs.",
+            "Le CV téléchargeable est mis à disposition pour évaluer une candidature. Il ne doit pas être diffusé à d'autres fins."
+          ]
+        },
+        "5": {
+          "title": "Liens externes",
+          "body": [
+            "Le site renvoie vers des services tiers (GitHub, LinkedIn, WhatsApp). Je ne contrôle pas leur contenu et ne suis pas responsable de leurs pratiques."
+          ]
+        },
+        "6": {
+          "title": "Responsabilité",
+          "body": [
+            "Je m'efforce de tenir les informations à jour et exactes, sans pouvoir le garantir. Le site peut être interrompu pour maintenance ou pour des raisons techniques indépendantes de ma volonté."
+          ]
+        },
+        "7": {
+          "title": "Données personnelles",
+          "body": [
+            "Le traitement de vos données est décrit dans la politique de confidentialité, accessible en bas de chaque page."
+          ]
+        },
+        "8": {
+          "title": "Droit applicable",
+          "body": [
+            "Ces conditions sont régies par le droit camerounais. Elles peuvent être modifiées à tout moment ; la date de mise à jour figure en haut de cette page."
+          ]
+        }
+      }
+    }
   }
 }

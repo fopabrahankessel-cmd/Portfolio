@@ -198,9 +198,138 @@
   },
   "footer": {
     "built": "Designed and built in Yaoundé.",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "privacy": "Privacy policy",
+    "terms": "Terms of use",
+    "cookies": "Cookie settings"
   },
   "common": {
     "newTab": "opens in a new tab"
+  },
+  "page": {
+    "home": "Portfolio home",
+    "back": "Back to the portfolio"
+  },
+  "consent": {
+    "title": "Audience measurement",
+    "body": "With your consent, I use Vercel Web Analytics to count visits anonymously, without advertising cookies. Nothing loads if you refuse.",
+    "learnMore": "Read the privacy policy",
+    "accept": "Accept",
+    "refuse": "Refuse"
+  },
+  "notFound": {
+    "eyebrow": "Error 404",
+    "title": "This page does not exist",
+    "body": "The link may be wrong or the page may have moved. The portfolio is still here.",
+    "cta": "Back to the portfolio"
+  },
+  "legal": {
+    "eyebrow": "Legal information",
+    "privacy": {
+      "title": "Privacy policy",
+      "updated": "Last updated: 18 November 2026",
+      "intro": "This site is the personal portfolio of {{name}}. This page explains what data is processed when you visit it, why, and how to exercise your rights.",
+      "sections": {
+        "1": {
+          "title": "Data controller",
+          "body": ["{{name}}, Yaoundé, Cameroon. Contact: {{email}}."]
+        },
+        "2": {
+          "title": "Data collected",
+          "body": [
+            "The site has no forms and creates no accounts.",
+            "Preferences saved in your browser (local storage, not cookies): your chosen language and your choice about audience measurement. This information never leaves your device.",
+            "Audience measurement, only if you accept it: Vercel Web Analytics and Vercel Speed Insights record pages viewed, the referring site, country, device type, browser and performance metrics. These tools use no cookies and cannot identify you personally.",
+            "Technical logs: like any host, Vercel processes your IP address and request details to serve the pages and keep the service secure."
+          ]
+        },
+        "3": {
+          "title": "Purposes and legal bases",
+          "body": [
+            "Serving and protecting the site: legitimate interest.",
+            "Measuring audience and site speed to improve it: your consent, which you can withdraw at any time."
+          ]
+        },
+        "4": {
+          "title": "Contact by WhatsApp or e-mail",
+          "body": [
+            "If you contact me by WhatsApp or e-mail, I use your details and message only to reply to you. These exchanges are also subject to the terms of WhatsApp (Meta) or your e-mail provider. I keep them for as long as our conversation needs, and at most three years after the last contact."
+          ]
+        },
+        "5": {
+          "title": "Recipients and transfers",
+          "body": [
+            "Technical and audience data is processed by the host, Vercel Inc., based in the United States. Vercel covers these transfers with standard contractual clauses. No data is sold or used for advertising."
+          ]
+        },
+        "6": {
+          "title": "Retention",
+          "body": [
+            "Your audience measurement choice is kept for 13 months, after which you are asked again. Audience statistics are aggregated and kept according to Vercel's policy."
+          ]
+        },
+        "7": {
+          "title": "Your rights",
+          "body": [
+            "Under applicable data protection law, including the GDPR for visitors from the European Union, you have the right to access, correct, erase, object to and restrict the processing of your data. Write to {{email}}. You may also complain to the data protection authority of your country.",
+            "To withdraw your consent to audience measurement, use the \"Cookie settings\" link at the bottom of every page."
+          ]
+        }
+      }
+    },
+    "terms": {
+      "title": "Terms of use",
+      "updated": "Last updated: 18 November 2026",
+      "intro": "These terms govern your use of this site. By browsing it, you accept them.",
+      "sections": {
+        "1": {
+          "title": "Publisher",
+          "body": ["{{name}}, software engineer, Yaoundé, Cameroon. Contact: {{email}}."]
+        },
+        "2": {
+          "title": "Hosting",
+          "body": [
+            "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, United States (vercel.com)."
+          ]
+        },
+        "3": {
+          "title": "Purpose of the site",
+          "body": [
+            "This site presents the background, skills and projects of {{name}} so that recruiters and clients can get in touch. It is provided free of charge, for information only."
+          ]
+        },
+        "4": {
+          "title": "Intellectual property",
+          "body": [
+            "The text, photographs, illustrations, logo and code of this site belong to {{name}} unless stated otherwise. Reproduction or reuse without written permission is prohibited. Technology names and logos belong to their respective owners.",
+            "The downloadable CV is provided to assess an application. It must not be distributed for any other purpose."
+          ]
+        },
+        "5": {
+          "title": "External links",
+          "body": [
+            "The site links to third-party services (GitHub, LinkedIn, WhatsApp). I do not control their content and am not responsible for their practices."
+          ]
+        },
+        "6": {
+          "title": "Liability",
+          "body": [
+            "I try to keep the information accurate and up to date but cannot guarantee it. The site may be unavailable for maintenance or for technical reasons beyond my control."
+          ]
+        },
+        "7": {
+          "title": "Personal data",
+          "body": [
+            "How your data is processed is described in the privacy policy, linked at the bottom of every page."
+          ]
+        },
+        "8": {
+          "title": "Governing law",
+          "body": [
+            "These terms are governed by the law of Cameroon. They may change at any time; the date of the latest update is shown at the top of this page."
+          ]
+        }
+      }
+    }
   }
 }

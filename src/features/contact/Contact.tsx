@@ -84,15 +84,19 @@ export default function Contact() {
           </div>
 
           <dl className="text-muted mt-8 flex flex-col items-center justify-center gap-x-8 gap-y-2 text-sm sm:flex-row">
-            <div className="flex items-center gap-2">
-              <Phone size={14} aria-hidden="true" className="text-saffron" />
+            <div>
               <dt className="sr-only">{t('contact.phoneLabel')}</dt>
-              <dd className="font-mono">{profile.phoneDisplay}</dd>
+              <dd className="flex items-center gap-2 font-mono">
+                <Phone size={14} aria-hidden="true" className="text-saffron shrink-0" />
+                {profile.phoneDisplay}
+              </dd>
             </div>
-            <div className="flex items-center gap-2">
-              <Mail size={14} aria-hidden="true" className="text-saffron" />
+            <div>
               <dt className="sr-only">{t('contact.emailLabel')}</dt>
-              <dd className="font-mono break-all">{profile.email}</dd>
+              <dd className="flex items-center gap-2 font-mono break-all">
+                <Mail size={14} aria-hidden="true" className="text-saffron shrink-0" />
+                {profile.email}
+              </dd>
             </div>
           </dl>
 

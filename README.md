@@ -27,7 +27,7 @@ npm run format     # Prettier
 | ------------------------------ | ----------------------------------- |
 | All visible text (English)     | `src/locales/en/translation.json`   |
 | All visible text (French)      | `src/locales/fr/translation.json`   |
-| Contact details and links      | `src/content/profile.ts`            |
+| Contact details and links      | `src/content/profile.ts` (encoded)  |
 | Projects (links, technologies) | `src/content/projects.ts`           |
 | SchoolLink diagram steps       | `src/content/flow.ts`               |
 | Stack groups                   | `src/content/stack.ts`              |
@@ -36,6 +36,39 @@ npm run format     # Prettier
 | Colours and fonts              | `src/index.css` (`@theme` block)    |
 
 A test fails if the English and French files do not have exactly the same keys.
+
+## Deployment (Vercel)
+
+`vercel.json` sets clean URLs, forces HTTPS (HSTS) and adds security headers
+(Content-Security-Policy, X-Frame-Options and others). Pages:
+
+| URL        | Source               |
+| ---------- | -------------------- |
+| `/`        | `index.html`         |
+| `/privacy` | `privacy/index.html` |
+| `/terms`   | `terms/index.html`   |
+| any other  | `404.html`           |
+
+`sitemap.xml` and `robots.txt` are generated at build time. Canonical links,
+the sitemap and the social preview use `SITE_URL` (for example
+`https://brahan.dev`); on Vercel it defaults to the production `.vercel.app`
+address. Set it in the Vercel project settings once you add a custom domain.
+
+Audience measurement is Vercel Web Analytics and Speed Insights, loaded only
+after the visitor accepts the cookie banner. Enable both in the Vercel
+dashboard (project, Analytics and Speed Insights tabs).
+
+E-mail and phone number are stored encoded in `src/content/profile.ts` so
+harvesting bots do not find them in the code. The comment in
+`src/lib/obfuscate.ts` shows how to encode a new value.
+
+## Brand images
+
+```bash
+npm run brand      # favicons + public/og-image.png (needs Chrome or Edge)
+```
+
+The social preview template is `scripts/og-image.html`.
 
 ## Photos
 

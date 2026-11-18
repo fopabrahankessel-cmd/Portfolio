@@ -1,0 +1,138 @@
+<!doctype html>
+<!-- Template for public/og-image.png, rendered by scripts/build-brand.mjs. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      @font-face {
+        font-family: 'Syne';
+        font-weight: 800;
+        src: url('../node_modules/@fontsource/syne/files/syne-latin-800-normal.woff2')
+          format('woff2');
+      }
+      @font-face {
+        font-family: 'Inter';
+        font-weight: 500;
+        src: url('../node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2')
+          format('woff2');
+      }
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-weight: 400;
+        src: url('../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2')
+          format('woff2');
+      }
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        background: #0d0b0c;
+        color: #f4ede4;
+        font-family: 'Inter', sans-serif;
+      }
+      .card {
+        position: relative;
+        width: 1200px;
+        height: 630px;
+        display: flex;
+        align-items: center;
+        gap: 64px;
+        padding: 0 72px;
+        background:
+          radial-gradient(circle at 85% 110%, rgba(232, 69, 44, 0.35), transparent 55%),
+          radial-gradient(circle at 0% 0%, rgba(242, 163, 58, 0.12), transparent 45%), #0d0b0c;
+      }
+      .band {
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 14px;
+        background: repeating-linear-gradient(
+          90deg,
+          #e8452c 0 10px,
+          #f4ede4 10px 14px,
+          #f2a33a 14px 24px,
+          #0d0b0c 24px 28px
+        );
+      }
+      .band.bottom {
+        inset: auto 0 0 0;
+      }
+      .text {
+        flex: 1;
+      }
+      .eyebrow {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 22px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #f2a33a;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .eyebrow i {
+        width: 12px;
+        height: 12px;
+        background: #e8452c;
+        transform: rotate(45deg);
+      }
+      h1 {
+        margin-top: 26px;
+        font-family: 'Syne', sans-serif;
+        font-weight: 800;
+        font-size: 78px;
+        line-height: 1;
+        letter-spacing: -0.02em;
+      }
+      .role {
+        margin-top: 22px;
+        font-family: 'Syne', sans-serif;
+        font-weight: 800;
+        font-size: 40px;
+        background: linear-gradient(90deg, #e8452c, #f2a33a);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      .stack {
+        margin-top: 34px;
+        font-size: 26px;
+        color: #bdb2a5;
+      }
+      .photo {
+        width: 330px;
+        height: 412px;
+        border-radius: 28px;
+        padding: 8px;
+        background: linear-gradient(135deg, #e8452c, #f2a33a);
+        transform: rotate(2deg);
+        flex-shrink: 0;
+      }
+      .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 22px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="band"></div>
+      <div class="text">
+        <p class="eyebrow"><i></i>Yaoundé · Cameroon</p>
+        <h1>Brahan Kessel Fopa</h1>
+        <p class="role">Backend Software Engineer</p>
+        <p class="stack">Java · Spring Boot · PostgreSQL · Flutter</p>
+      </div>
+      <div class="photo"><img src="../source-assets/portrait.jpg" alt="" /></div>
+      <div class="band bottom"></div>
+    </div>
+  </body>
+</html>

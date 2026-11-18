@@ -25,3 +25,6 @@ dist-ssr
 
 .superpowers/
 _scaffold/
+
+.playwright-mcp/
+.vercel

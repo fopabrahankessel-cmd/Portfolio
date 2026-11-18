@@ -44,16 +44,17 @@ export function About() {
         <Reveal delay={0.12}>
           <dl className="border-line bg-surface/70 divide-line divide-y divide-dashed rounded-2xl border backdrop-blur">
             {facts.map(({ icon: Icon, label, value }) => (
-              <div key={label} className="flex items-start gap-4 p-5">
-                <span className="border-line text-saffron grid size-10 shrink-0 place-items-center rounded-xl border">
-                  <Icon size={18} aria-hidden="true" />
-                </span>
-                <div>
-                  <dt className="text-faint font-mono text-[11px] tracking-[0.18em] uppercase">
-                    {label}
-                  </dt>
-                  <dd className="text-cloth mt-1 font-medium">{value}</dd>
-                </div>
+              <div key={label} className="relative min-h-20 p-5 pl-[4.75rem]">
+                <dt className="text-faint font-mono text-[11px] tracking-[0.18em] uppercase">
+                  <span
+                    aria-hidden="true"
+                    className="border-line text-saffron absolute top-5 left-5 grid size-10 place-items-center rounded-xl border"
+                  >
+                    <Icon size={18} />
+                  </span>
+                  {label}
+                </dt>
+                <dd className="text-cloth mt-1 font-medium">{value}</dd>
               </div>
             ))}
           </dl>

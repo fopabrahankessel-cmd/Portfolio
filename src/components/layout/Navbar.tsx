@@ -57,7 +57,7 @@ export function Navbar({ activeId }: NavbarProps) {
       >
         <a
           href="#hero"
-          aria-label={t('nav.home')}
+          aria-label={`bkf. ${t('nav.home')}`}
           className="font-display text-cloth text-xl font-extrabold tracking-tight"
         >
           {profile.monogram.slice(0, -1)}

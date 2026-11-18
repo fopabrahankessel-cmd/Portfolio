@@ -1,6 +1,6 @@
-import { MotionConfig } from 'motion/react'
 import { lazy, Suspense } from 'react'
 
+import { CookieBanner } from '@/components/layout/CookieBanner'
 import { CursorGlow } from '@/components/layout/CursorGlow'
 import { Footer } from '@/components/layout/Footer'
 import { Navbar } from '@/components/layout/Navbar'
@@ -27,33 +27,32 @@ export default function App() {
   const activeId = useActiveSection(sectionIds)
 
   return (
-    <MotionConfig reducedMotion="user">
-      <SmoothScroll>
-        <CursorGlow />
-        <ScrollThread activeId={activeId} />
-        <Navbar activeId={activeId} />
-        <main id="main" className="relative z-10">
-          <Hero />
-          <StitchDivider />
-          <About />
-          <StitchDivider />
-          <Suspense fallback={<SectionFallback id="work" />}>
-            <Work />
-          </Suspense>
-          <StitchDivider />
-          <Suspense fallback={<SectionFallback id="stack" />}>
-            <Stack />
-          </Suspense>
-          <StitchDivider />
-          <Suspense fallback={<SectionFallback id="path" />}>
-            <Path />
-          </Suspense>
-          <Suspense fallback={<SectionFallback id="contact" />}>
-            <Contact />
-          </Suspense>
-        </main>
-        <Footer />
-      </SmoothScroll>
-    </MotionConfig>
+    <SmoothScroll>
+      <CursorGlow />
+      <ScrollThread activeId={activeId} />
+      <Navbar activeId={activeId} />
+      <main id="main" className="relative z-10">
+        <Hero />
+        <StitchDivider />
+        <About />
+        <StitchDivider />
+        <Suspense fallback={<SectionFallback id="work" />}>
+          <Work />
+        </Suspense>
+        <StitchDivider />
+        <Suspense fallback={<SectionFallback id="stack" />}>
+          <Stack />
+        </Suspense>
+        <StitchDivider />
+        <Suspense fallback={<SectionFallback id="path" />}>
+          <Path />
+        </Suspense>
+        <Suspense fallback={<SectionFallback id="contact" />}>
+          <Contact />
+        </Suspense>
+      </main>
+      <Footer />
+      <CookieBanner />
+    </SmoothScroll>
   )
 }
